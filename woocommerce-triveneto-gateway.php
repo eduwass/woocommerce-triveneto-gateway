@@ -75,7 +75,7 @@ function woocommerce_gateway_tvb_init() {
           $Error     = $_POST['Error'];
           $ErrorText = $_POST['ErrorText'];
           // record to log
-          PgConsTriv::triveneto_log('Detected error: ' . $Errror . ' => ' . $ErrorText);
+          PgConsTriv::triveneto_log('Detected error: ' . $Error . ' => ' . $ErrorText);
         }
 
         // Process the order
