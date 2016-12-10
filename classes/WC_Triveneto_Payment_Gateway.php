@@ -281,7 +281,7 @@
       $pg->setErrorURL($order->get_cancel_order_url());
 
       // Send the message of PaymentInit
-      $amount      = $woocommerce->cart->get_cart_total();
+      $amount      = $order->get_total();
       $amount      = floatval( preg_replace( '#[^\d.]#', '', $amount)); // parse numbers
       $tracking_id = $order_id;
       $pg->sendVal_PI($amount, $tracking_id);
